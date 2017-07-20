@@ -10,6 +10,13 @@
   <body>
   <script>
     window.fbAsyncInit = function() {
+
+    function checkLoginState() {
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    };
+
       FB.init({
         appId      : '1499628940101461',
         cookie     : true,
@@ -18,13 +25,10 @@
       });
 
       FB.AppEvents.logPageView();
+
     };
 
-    (function checkLoginState() {
-      FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-      });
-    });
+
 
     (function(d, s, id){
        var js, fjs = d.getElementsByTagName(s)[0];
