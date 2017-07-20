@@ -5,6 +5,12 @@
     <title>title</title>
   </head>
   <body>
+
+  <script>
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+</script>
   <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -32,11 +38,7 @@
   onlogin="checkLoginState();">
 </fb:login-button>
 
-<script>
-FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-});
-</script>
+
 
   </body>
 </html>
