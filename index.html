@@ -17,12 +17,13 @@
         version    : 'v2.8'
       });
 
+      console.log('tasdf');
+
       FB.AppEvents.logPageView();
     };
 
     function checkLoginState() {
       FB.getLoginStatus(function(response) {
-        console.log('tasdf');
         statusChangeCallback(response);
 
       });
