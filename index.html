@@ -18,6 +18,12 @@
       });
 
       FB.AppEvents.logPageView();
+
+            function checkLoginState() {
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    }
     };
 
     (function(d, s, id){
@@ -29,6 +35,7 @@
      }(document, 'script', 'facebook-jssdk'));
 
 
+
   </script>
 
   <fb:login-button
@@ -36,13 +43,6 @@
   onlogin="checkLoginState();">
 </fb:login-button>
 
-<script>
-      function checkLoginState() {
-      FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-      });
-    }
-</script>
   </body>
 </html>
 
