@@ -17,17 +17,8 @@
         version    : 'v2.8'
       });
 
-      console.log('tasdf');
-
       FB.AppEvents.logPageView();
     };
-
-    function checkLoginState() {
-      FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-
-      });
-    }
 
     (function(d, s, id){
        var js, fjs = d.getElementsByTagName(s)[0];
@@ -45,8 +36,13 @@
   onlogin="checkLoginState();">
 </fb:login-button>
 
-
-
+<script>
+      function checkLoginState() {
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    }
+</script>
   </body>
 </html>
 
