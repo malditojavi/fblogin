@@ -18,12 +18,13 @@
       });
 
       FB.AppEvents.logPageView();
-
-          FB.getLoginStatus(function(response) {
-        alert(statusChangeCallback(response));
-        console.log("tumad")
-      });
     };
+
+    function checkLoginState() {
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    }
 
     (function(d, s, id){
        var js, fjs = d.getElementsByTagName(s)[0];
